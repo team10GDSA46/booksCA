@@ -1,0 +1,93 @@
+﻿body, html {
+    height: 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+    width: 607px;
+}
+section{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.container {
+    position: relative;
+    height: 400px;
+    width: 600px;
+    margin: 5% auto;
+
+    
+}
+  .inner1 {
+        width: 300px;
+        height: 400px;
+        position: absolute;
+        left: 0;
+        top:0;
+        box-sizing: border-box;
+        padding: 40px;
+ }
+
+h3 {
+    font-size: 2.5vw;
+    margin-bottom: 13%;
+    margin-top: 6%;
+}
+
+input[type=text],input[type=password]{
+    width:80%;
+    height:10%;
+    margin-bottom:3%;
+    border:0;
+    background-color:transparent;
+    border-bottom:1px solid #4b4040;
+}
+input[placeholder]{
+    font-size:1.4vw;
+    padding-left:3%;
+}
+.btn {
+    width: 40%;
+    height: 10%;
+    margin-bottom: 9vh;
+    font-size: 1vw;
+    font-family: 'sans-serif';
+    background-color: #10bbd5;
+    color: white;
+    border: 1px solid;
+}
+.inner2
+
+{
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    top:0;
+    box-sizing: border-box;
+    padding: 40px;
+
+
+}
+
+h4 {
+    font-size: 2.5vw;
+    margin-bottom: 13%;
+    margin-top: 6%;
+}
+
+input[type=text], input[type=password] {
+    width: 80%;
+    height: 10%;
+    margin-bottom: 3%;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid #4b4040;
+}
+input[placeholder] {
+    font-size: 1.4vw;
+    padding-left: 3%;
+}
+.inner2 .inner1{
+    display: block;
+    margin-bottom:40px;
+    text-align: center;
+}
