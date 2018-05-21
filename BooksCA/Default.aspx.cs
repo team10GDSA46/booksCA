@@ -11,6 +11,14 @@ namespace BooksCA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                using (Mybooks b = new Mybooks())
+                {
+                    GridView1.DataSource = b.Books.ToList<Book>();
+                    GridView1.DataBind();
+                }
+            }
 
         }
     }
