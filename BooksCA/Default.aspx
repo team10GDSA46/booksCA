@@ -2,5 +2,4 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div id="mainDiv" class="panel panel-body" runat="server"></div>
-    </div>
 </asp:Content>

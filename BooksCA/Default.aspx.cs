@@ -26,8 +26,8 @@ namespace BooksCA
                         System.Web.UI.HtmlControls.HtmlInputImage image =
                             new System.Web.UI.HtmlControls.HtmlInputImage();
 
-                        image.Src = "images/" + bookdetail.ISBN +".jpg";
-                        details.InnerHtml = "<hr><strong style=\"font-size: 16px;\">" 
+                        image.Src = "images/" + bookdetail.ISBN + ".jpg";
+                        details.InnerHtml = "<hr><strong style=\"font-size: 16px;\">"
                             + bookdetail.Title + "</strong><br />";
                         details.InnerHtml += bookdetail.Author + "<br />";
                         details.InnerHtml += bookdetail.ISBN + "<br />";
