@@ -4,7 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace BooksCA
 {
@@ -14,34 +16,66 @@ namespace BooksCA
         {
             if (!IsPostBack)
             {
-                using (Mybooks b = new Mybooks())
+                using (Mybooks mb = new Mybooks())
                 {
-                    List<Book> booklist = b.Books.ToList();
+                    List<Book> booklist = mb.Books.ToList();
                     foreach (Book bookdetail in booklist)
                     {
-                        System.Web.UI.HtmlControls.HtmlGenericControl newDiv =
-                          new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
-                        System.Web.UI.HtmlControls.HtmlGenericControl details =
-                            new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
-                        System.Web.UI.HtmlControls.HtmlInputImage image =
-                            new System.Web.UI.HtmlControls.HtmlInputImage();
+                        HtmlGenericControl newDiv = new HtmlGenericControl("DIV");
+                        HtmlGenericControl details = new HtmlGenericControl("DIV");
+                        HtmlInputImage image = new HtmlInputImage();
+                        HtmlAnchor anch = new HtmlAnchor();
+                        HtmlAnchor btncart = new HtmlAnchor();
 
-                        image.Src = "images/" + bookdetail.ISBN +".jpg";
-                        details.InnerHtml = "<hr><strong style=\"font-size: 16px;\">" 
+                        image.Src = "images/" + bookdetail.ISBN + ".jpg";
+                        image.Disabled = true;
+                        anch.InnerHtml = "<hr><strong style=\"font-size: 16px;\">"
                             + bookdetail.Title + "</strong><br />";
                         details.InnerHtml += bookdetail.Author + "<br />";
                         details.InnerHtml += bookdetail.ISBN + "<br />";
                         details.InnerHtml += "$ " + bookdetail.Price;
                         newDiv.Attributes.Add("class", "col-xs-12 col-sm-6 col-md-4 well");
-                        newDiv.Style.Add("height", "430px");
+                        newDiv.Style.Add("height", "500px");
                         newDiv.Style.Add("text-align", "center");
+                        newDiv.Style.Add("padding", "30px");
+                        btncart.InnerText = "Add to Cart";
+                        btncart.Attributes.Add("class", "btn btn-primary");
+                        btncart.Style.Add("position", "absolute");
+                        btncart.Style.Add("top", "86%");
+                        btncart.Style.Add("left", "36%");
+                        btncart.ID = bookdetail.BookID.ToString();
+                        anch.HRef = "~/BookDetails.aspx?id=" + bookdetail.BookID;
+                        
+                        // user access
+                        if(mb.cartBooks.Where(x => (x.UserID == 1) &&
+                         (x.BookID == bookdetail.BookID)).Count() > 0)
+                        {
+                            btncart.InnerText = "Already in cart!";
+                            btncart.Style["left"] = "33%";
+                            btncart.Disabled = true;
+                        } else if(new Work().CheckStock(bookdetail.BookID) < 1)
+                        {
+                            btncart.InnerText = "Out of Stock";
+                            btncart.Attributes["class"] = "btn btn-danger";
+                            btncart.Disabled = true;
+                        }
+                        else
+                        {
+                            btncart.HRef = "~/ViewCart.aspx?id=" + bookdetail.BookID;
+                        }
+
                         mainDiv.Controls.Add(newDiv);
                         newDiv.Controls.Add(image);
+                        newDiv.Controls.Add(anch);
                         newDiv.Controls.Add(details);
+                        newDiv.Controls.Add(btncart);
                     }
                 }
             }
-
+            else
+            {
+                testlbl.InnerText = "Changed";
+            }
         }
     }
 }

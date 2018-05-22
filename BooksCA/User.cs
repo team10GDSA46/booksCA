@@ -6,40 +6,41 @@ namespace BooksCA
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Book")]
-    public partial class Book
+    public partial class User
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Book()
+        public User()
         {
             cartBooks = new HashSet<cartBook>();
-            transdetails = new HashSet<Transdetail>();
+            trans = new HashSet<Tran>();
         }
 
-        public int BookID { get; set; }
+        public int UserID { get; set; }
 
         [Required]
-        [StringLength(120)]
-        public string Title { get; set; }
-
-        public int CategoryID { get; set; }
+        [StringLength(50)]
+        public string FirstName { get; set; }
 
         [Required]
-        [StringLength(22)]
-        public string ISBN { get; set; }
+        [StringLength(50)]
+        public string LastName { get; set; }
 
         [Required]
-        [StringLength(64)]
-        public string Author { get; set; }
+        [StringLength(50)]
+        public string Password { get; set; }
 
-        public int Stock { get; set; }
+        [Required]
+        [StringLength(250)]
+        public string Email { get; set; }
 
-        public decimal Price { get; set; }
+        [Required]
+        [StringLength(50)]
+        public string UserType { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<cartBook> cartBooks { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Transdetail> transdetails { get; set; }
+        public virtual ICollection<Tran> trans { get; set; }
     }
 }
