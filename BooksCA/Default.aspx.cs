@@ -29,26 +29,32 @@ namespace BooksCA
 
                         image.Src = "images/" + bookdetail.ISBN + ".jpg";
                         image.Disabled = true;
-                        anch.InnerHtml = "<hr><strong style=\"font-size: 16px;\">";
-                        details.InnerHtml = "<hr><strong style=\"font-size: 16px;\">"
+
+                        anch.InnerHtml = "<hr><strong style=\"font-size: 16px;\">"
                             + bookdetail.Title + "</strong><br />";
+
                         details.InnerHtml += bookdetail.Author + "<br />";
                         details.InnerHtml += bookdetail.ISBN + "<br />";
                         details.InnerHtml += "$ " + bookdetail.Price;
+
                         newDiv.Attributes.Add("class", "col-xs-12 col-sm-6 col-md-4 well");
                         newDiv.Style.Add("height", "500px");
                         newDiv.Style.Add("text-align", "center");
                         newDiv.Style.Add("padding", "30px");
+
                         btncart.InnerText = "Add to Cart";
                         btncart.Attributes.Add("class", "btn btn-primary");
                         btncart.Style.Add("position", "absolute");
                         btncart.Style.Add("top", "86%");
                         btncart.Style.Add("left", "36%");
                         btncart.ID = bookdetail.BookID.ToString();
+
+
                         anch.HRef = "~/BookDetails.aspx?id=" + bookdetail.BookID;
                         
                         // user access
-                        if(mb.cartBooks.Where(x => (x.UserID == 1) &&
+                        if(mb.CartBooks.Where(x => (x.UserID == 1) &&
+
                          (x.BookID == bookdetail.BookID)).Count() > 0)
                         {
                             btncart.InnerText = "Already in cart!";

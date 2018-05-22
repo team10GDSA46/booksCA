@@ -238,7 +238,7 @@
     <Compile Include="BookDetails.aspx.designer.cs">
       <DependentUpon>BookDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="cartBook.cs" />
+    <Compile Include="CartBook.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -254,6 +254,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Discount.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -295,7 +296,7 @@
       <DependentUpon>testlogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tran.cs" />
-    <Compile Include="Transdetail.cs" />
+    <Compile Include="TransDetail.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserBusinessLogic.cs" />
     <Compile Include="UserPage.aspx.cs">

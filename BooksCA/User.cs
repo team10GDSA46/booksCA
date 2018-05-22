@@ -11,8 +11,8 @@ namespace BooksCA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            cartBooks = new HashSet<cartBook>();
-            trans = new HashSet<Tran>();
+            CartBooks = new HashSet<CartBook>();
+            Trans = new HashSet<Tran>();
         }
 
         public int UserID { get; set; }
@@ -38,9 +38,9 @@ namespace BooksCA
         public string UserType { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<cartBook> cartBooks { get; set; }
+        public virtual ICollection<CartBook> CartBooks { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tran> trans { get; set; }
+        public virtual ICollection<Tran> Trans { get; set; }
     }
 }

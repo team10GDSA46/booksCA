@@ -22,30 +22,62 @@ namespace BooksCA {
         protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
-        /// Label1 control.
+        /// lbltitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+
+        protected global::System.Web.UI.WebControls.Label lbltitle;
         
         /// <summary>
-        /// Label2 control.
+        /// lblcate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+
+        protected global::System.Web.UI.WebControls.Label lblcate;
         
         /// <summary>
-        /// Button1 control.
+        /// lblisbn control.
+
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+
+        protected global::System.Web.UI.WebControls.Label lblisbn;
+        
+        /// <summary>
+        /// lblauthor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblauthor;
+        
+        /// <summary>
+        /// lblprice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblprice;
+        
+        /// <summary>
+        /// btnAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAdd;
+
     }
 }

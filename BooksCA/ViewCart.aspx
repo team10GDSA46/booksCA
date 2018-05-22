@@ -2,10 +2,20 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div id="cartdiv" runat="server">
-        <p id="cartstatus" runat="server"></p>
+        <br />
+        <p id="cartstatus" runat="server" style="text-align: center;
+             font-size: 150%; font-weight: 700; font-style: italic"></p>
     </div>
     <br />
-    <asp:Label ID="Label1" runat="server" Text="Total"></asp:Label>
-    <asp:Button ID="btncheckout" CssClass="btn btn-primary" runat="server" Text="Check Out" OnClick="btncheckout_Click" />
+    <asp:Label ID="LblTotal" runat="server" Text=""
+        style="position:relative; float:right;
+            font-size: 180%; font-weight: 700; margin-right:30px;"></asp:Label>
+    <br />
+    <br />
+    <asp:Button ID="btncheckout" CssClass="btn btn-primary" runat="server" Text="Check Out" OnClick="Btncheckout_Click"
+        style="position:relative; float:right; margin-right:30px;"/>
+    <br />
+    <br />
+
 </asp:Content>
 
