@@ -29,7 +29,8 @@ namespace BooksCA
 
                         image.Src = "images/" + bookdetail.ISBN + ".jpg";
                         image.Disabled = true;
-                        anch.InnerHtml = "<hr><strong style=\"font-size: 16px;\">"
+                        anch.InnerHtml = "<hr><strong style=\"font-size: 16px;\">";
+                        details.InnerHtml = "<hr><strong style=\"font-size: 16px;\">"
                             + bookdetail.Title + "</strong><br />";
                         details.InnerHtml += bookdetail.Author + "<br />";
                         details.InnerHtml += bookdetail.ISBN + "<br />";
