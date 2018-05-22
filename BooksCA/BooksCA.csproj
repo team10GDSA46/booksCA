@@ -142,6 +142,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AddBooks.aspx" />
+    <Content Include="AddBooks2.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -163,6 +165,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="StyleSheetWeb2.css" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Loginpage.aspx" />
@@ -204,6 +208,20 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBooks.aspx.cs">
+      <DependentUpon>AddBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddBooks.aspx.designer.cs">
+      <DependentUpon>AddBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddBooks2.aspx.cs">
+      <DependentUpon>AddBooks2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddBooks2.aspx.designer.cs">
+      <DependentUpon>AddBooks2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -213,6 +231,7 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="bizlogic.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Contact.aspx.cs">
@@ -261,6 +280,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
