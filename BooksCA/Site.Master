@@ -37,9 +37,8 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
-        <div class="banner">
-        </div>
+               
+        <div class="banner"></div>
 
         <!-- div class="navbar navbar-inverse navbar-fixed-top" -->
         <div class="navbar navbar-inverse">
