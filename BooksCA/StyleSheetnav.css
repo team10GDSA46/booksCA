@@ -5,10 +5,8 @@
 }
 
 .navbar {
-    /*background-color: #4c394e;*/
     border-bottom: 1px solid #dedede;
     font-family: 'Alegreya Sans', sans-serif;
-    padding: 15px;
 }
 
 .navbar .navbar-nav .nav-link {
