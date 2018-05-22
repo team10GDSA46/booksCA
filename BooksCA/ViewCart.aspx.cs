@@ -19,6 +19,7 @@ namespace BooksCA
             mb = new Mybooks();
             if (Request.QueryString["id"] != null)
             {
+
                 bid = Convert.ToInt32(Request.QueryString["id"]);
                 if ((mb.Books.Where(x => x.BookID == bid).Count() > 0) &&
 
@@ -85,6 +86,7 @@ namespace BooksCA
                         btn.Attributes.Add("class", "btn btn-danger");
                         btn.Click += BtnClick;
 
+
                         cartdiv.Controls.Add(newDiv);
                         newDiv.Controls.Add(imagediv);
                         imagediv.Controls.Add(img);
@@ -94,12 +96,14 @@ namespace BooksCA
                     }
                     LblTotal.Text = "Total ~ " + String.Format("{0:c}",
                         new Work().CalculateTotal(cart));
+
                 }
                 else
                 {
                     cartstatus.InnerText = "There is no book in cart.";
                     btncheckout.Enabled = false;
                 }
+
             }
         }
         protected void BtnClick(object sender, EventArgs e)
@@ -107,12 +111,15 @@ namespace BooksCA
             mb = new Mybooks();
             Button b = (Button)sender;
             int bid = Convert.ToInt32(b.ID);
+
             CartBook toDel = mb.CartBooks.Where(x =>
             (x.UserID == userid) && (x.BookID == bid)).First();
             mb.CartBooks.Remove(toDel);
+
             mb.SaveChanges();
             Response.Redirect("~/ViewCart.aspx");
         }
+
 
         protected void Btncheckout_Click(object sender, EventArgs e)
         {
@@ -121,6 +128,7 @@ namespace BooksCA
             w.Transaction(userid, cartitems);
             w.RemoveItems(userid);
             Response.Redirect("~/ViewCart.aspx?");
+
         }
     }
 }

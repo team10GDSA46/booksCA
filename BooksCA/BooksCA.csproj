@@ -143,6 +143,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="BookDetails.aspx" />
+    <Content Include="AddBooks.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -164,8 +165,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UserPage.aspx" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Loginpage.aspx" />
+    <Content Include="Protected\testprotect.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -195,7 +200,11 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Stylesheet\StyleSheet.css" />
+    <Content Include="testlogin.aspx" />
     <Content Include="ViewCart.aspx" />
+    <Content Include="StyleSheetnav.css" />
+    <Content Include="testprotectedfromroot.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -204,6 +213,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBooks.aspx.cs">
+      <DependentUpon>AddBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddBooks.aspx.designer.cs">
+      <DependentUpon>AddBooks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -213,6 +229,7 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="bizlogic.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="BookDetails.aspx.cs">
       <DependentUpon>BookDetails.aspx</DependentUpon>
@@ -241,8 +258,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Loginpage.aspx.cs">
+      <DependentUpon>Loginpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loginpage.aspx.designer.cs">
+      <DependentUpon>Loginpage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mybooks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protected\testprotect.aspx.cs">
+      <DependentUpon>testprotect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Protected\testprotect.aspx.designer.cs">
+      <DependentUpon>testprotect.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -257,15 +288,37 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="testlogin.aspx.cs">
+      <DependentUpon>testlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testlogin.aspx.designer.cs">
+      <DependentUpon>testlogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tran.cs" />
     <Compile Include="TransDetail.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserBusinessLogic.cs" />
+    <Compile Include="UserPage.aspx.cs">
+      <DependentUpon>UserPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage.aspx.designer.cs">
+      <DependentUpon>UserPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewCart.aspx.cs">
       <DependentUpon>ViewCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewCart.aspx.designer.cs">
       <DependentUpon>ViewCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testprotectedfromroot.aspx.cs">
+      <DependentUpon>testprotectedfromroot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testprotectedfromroot.aspx.designer.cs">
+      <DependentUpon>testprotectedfromroot.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -277,8 +330,17 @@
     <Compile Include="Work.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\" />
+    <Folder Include="Pictures\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

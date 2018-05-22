@@ -1,0 +1,13 @@
+﻿body {
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar .container{
+    background-color: white;
+    border-bottom: thick double #ADD8E6;
+    font-family: 'Lato', sans-serif;
+}
+.navbar .navbar-nav .nav-link .navbar-header .navbar-brand {
+    color: #000000;
+}

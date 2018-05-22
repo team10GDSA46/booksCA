@@ -28,5 +28,6 @@
             <asp:Button ID="btnAdd" CssClass="btn btn-primary" runat="server" Text="Add to Cart" UseSubmitBehavior="False" />
             <br />
         </div>
+
     </div>
 </asp:Content>

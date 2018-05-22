@@ -49,10 +49,12 @@ namespace BooksCA
                         btncart.Style.Add("left", "36%");
                         btncart.ID = bookdetail.BookID.ToString();
 
+
                         anch.HRef = "~/BookDetails.aspx?id=" + bookdetail.BookID;
                         
                         // user access
                         if(mb.CartBooks.Where(x => (x.UserID == 1) &&
+
                          (x.BookID == bookdetail.BookID)).Count() > 0)
                         {
                             btncart.InnerText = "Already in cart!";
