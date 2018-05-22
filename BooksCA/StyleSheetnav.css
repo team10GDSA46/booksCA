@@ -1,17 +1,14 @@
-﻿
-body,html {
+﻿body, html {
     height: 100%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Alegreya Sans', sans-serif;
+
 }
 
-.navbar .container {
-    background-color: white;
-    border-bottom: thick double #ADD8E6;
-    font-family: 'Lato', sans-serif;
-}
-
-.navbar .navbar-nav .nav-link .navbar-header .navbar-brand {
-    color: #000000;
+.navbar {
+    background-color: #4c394e;
+    border-bottom: 1px solid #dedede;
+    font-family: 'Alegreya Sans', sans-serif;
+    padding: 15px;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -25,6 +22,22 @@ body,html {
 .navbar-toggler-icon {
     color: #fff;
 }
+/*header*/
+
+#header {
+    /*background: url('Pictures/headerhouse.jpg') center center no-repeat;*/
+    background-size: cover;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+    #header .header-right {
+        background-color: rgba(0,0,0,0.5);
+        padding: 30px;
+        border-radius: 10px;
+    }
 
 .footer {
     background-color: rgba(21,31,33,0.5);
