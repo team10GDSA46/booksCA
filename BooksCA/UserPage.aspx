@@ -3,9 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div>
         <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#addnew">Add New Books</a></li>
-            <li><a href="#discounts">Apply Discounts</a><br /></li>
+            <li><a class="active" href="UserPage.aspx">Home</a></li>
+            <li><a href="AddBooks.aspx">Add New Books</a></li>
+            <li><a href="WebForm1.aspx">Apply Discounts</a><br /></li>
         </ul>
 
         <link rel="stylesheet" href="StyleSheetUserPage.css"/>
