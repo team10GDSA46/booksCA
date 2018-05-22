@@ -165,11 +165,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="StyleSheetWeb2.css" />
     <Content Include="WebForm1.aspx" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="images\booklogo.png" />
     <Content Include="Loginpage.aspx" />
     <Content Include="Protected\testprotect.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -204,7 +202,7 @@
     <Content Include="Stylesheet\StyleSheet.css" />
     <Content Include="testlogin.aspx" />
     <Content Include="ViewCart.aspx" />
-    <Content Include="StyleSheet.css" />
+    <Content Include="StyleSheetnav.css" />
     <Content Include="testprotectedfromroot.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
@@ -322,7 +320,6 @@
     <Compile Include="Work.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
