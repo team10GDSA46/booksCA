@@ -11,3 +11,7 @@
 .navbar .navbar-nav .nav-link .navbar-header .navbar-brand {
     color: #000000;
 }
+table {
+    background-color: ghostwhite;
+    color: black;
+}
