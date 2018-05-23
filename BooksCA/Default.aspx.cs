@@ -33,6 +33,8 @@ namespace BooksCA
 
                         image.Src = "images/" + bookdetail.ISBN + ".jpg";
                         image.Disabled = true;
+                        image.Style.Add("width", "200px");
+                        image.Style.Add("height", "220px");
 
                         anch.InnerHtml = "<hr><strong style=\"font-size: 16px;\">"
                             + bookdetail.Title + "</strong><br />";

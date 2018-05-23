@@ -16,6 +16,7 @@ namespace BooksCA
         int bid;
         protected void Page_Load(object sender, EventArgs e)
         {
+
             mb = new Mybooks();
             if (Request.QueryString["id"] != null)
             {
@@ -45,6 +46,19 @@ namespace BooksCA
                 if ( count > 0)
                 {
                     Session["cartitems"] = cart;
+
+                    Work o = new Work();
+                    double checkDiscountValue = o.GetDiscountRate(DateTime.Today.Date);
+                    if (checkDiscountValue > 0)
+                    {
+                        DiscountLabel.Visible = true;
+                        DiscountLabel.Text = "You have a discount of " + (checkDiscountValue*100) + "%";
+                    }
+                    else
+                    {
+                        DiscountLabel.Visible = false;
+                    }
+
                     cartstatus.InnerText = count + " book(s) in cart.";
                     double discount = new Work().GetDiscountRate(DateTime.Today.Date);
                     foreach (Book b in cart)

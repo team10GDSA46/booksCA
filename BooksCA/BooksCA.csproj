@@ -167,6 +167,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="StyleSheettestLogin.css" />
     <Content Include="UserPage.aspx" />
     <Content Include="delete\WebForm1.aspx" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />

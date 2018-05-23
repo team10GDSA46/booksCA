@@ -11,3 +11,17 @@
 .navbar .navbar-nav .nav-link .navbar-header .navbar-brand {
     color: #000000;
 }
+<<<<<<< HEAD
+table {
+    background-color: ghostwhite;
+    color: black;
+}
+=======
+img {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+	width: 200px;
+	border-radius: 50%;
+}
+>>>>>>> c97c2f6a1b9e1c4854ec3b92ad544e848c30a143

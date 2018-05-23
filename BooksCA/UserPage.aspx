@@ -1,16 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UserPage.aspx.cs" Inherits="BooksCA.UserPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <div class="container">
         <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#addnew">Add New Books</a></li>
-            <li><a href="#discounts">Apply Discounts</a></li>
-            <li>
-                <br />
-            </li>
+            <li><a class="active" href="UserPage.aspx">Home</a></li>
+            <li><a href="AddBooks.aspx">Add New Books</a></li>
+            <li><a href="WebForm1.aspx">Apply Discounts</a><br /></li>
         </ul>
 
+        <link rel="stylesheet" href="StyleSheetUserPage.css"/>
         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False"
             OnRowDeleting="OnRowDeleting"
             OnRowEditing="OnRowEditing"
@@ -18,7 +17,7 @@
             OnRowUpdating="OnRowUpdating"
             DataKeyNames="BookID" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
             <Columns>
-                <asp:TemplateField HeaderText="BookID" SortExpression="BookID">
+                <asp:TemplateField HeaderText="BookID" SortExpression="BookID" >
 
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("BookID") %>'></asp:TextBox>

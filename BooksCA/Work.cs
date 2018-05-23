@@ -10,14 +10,11 @@ namespace BooksCA
     public class Work
     {
         Mybooks mb = new Mybooks();
+
         public Book GetBook(int id)
         {
             return mb.Books.Where
                     (b => b.BookID == id).First();
-        }
-        public void AddToCart()
-        {
-            // codes
         }
         public int CheckStock(int bookID)
         {
@@ -25,10 +22,7 @@ namespace BooksCA
                 .Where(x => x.BookID == bookID)
                 .Select(x => x.Stock).First();
         }
-        public void CheckOut()
-        {
-
-        }
+     
         public void Transaction(int userid, List<Book> cartitems)
         {
             Random r = new Random();
