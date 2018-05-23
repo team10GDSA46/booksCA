@@ -1,8 +1,8 @@
-﻿﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BooksCA.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="RegUsers.master.cs" Inherits="BooksCA.RegisteredUsers.RegUsers" %>
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head runat="server">
       <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -45,7 +45,7 @@
         
 
 
-        <div class="navbar sticky-top navbar-fixed-top"  style="background-color:aliceblue">
+        <div class="navbar sticky-top navbar-fixed-top" style="background-color:aliceblue">
             
             <div class="container">
                 <div class="navbar-header">
@@ -54,15 +54,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">GigaBooks</a>
+                    <a class="navbar-brand" runat="server" href=#>GigaBooks</a>
                    
                 </div>
                 <div class="navbar-collapse collapse" id="nav-collapse"> 
                      <ul class="nav navbar-nav navbar-right">
 
-                        <li><a runat="server" class="nav-link" href="testlogin.aspx">User Login</a></li>
-                        <li><a runat="server" class="nav-link" href="~/RegisteredUsers/ViewCart.aspx">Cart</a></li>
-
+                        <li><a runat="server" class="nav-link" href="~/">Home</a></li>
+                        <li><a runat="server" class="nav-link" href="~/RegisteredUsers/BookDetails.aspx">Add Book</a></li>
+                        <li><a runat="server" class="nav-link" href="~/RegisteredUsers/ViewCart.aspx">Manage Books</a></li>
                     </ul>
                 </div>
             </div>

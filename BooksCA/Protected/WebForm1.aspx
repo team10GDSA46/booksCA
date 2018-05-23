@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="BooksCA.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Protected/Protected.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="BooksCA.WebForm1" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div style =  "margin-left:auto; margin-right:auto; margin-top: 10px; height: 542px; width: 1347px;" class="panel panel-body">

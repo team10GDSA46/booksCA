@@ -56,7 +56,7 @@ namespace BooksCA
                         btncart.ID = bookdetail.BookID.ToString();
 
 
-                        anch.HRef = "~/BookDetails.aspx?id=" + bookdetail.BookID;
+                        anch.HRef = "~/RegisteredUsers/BookDetails.aspx?id=" + bookdetail.BookID;
                         
                         // user access
                         if(mb.CartBooks.Where(x => (x.UserID == 1) &&
@@ -74,7 +74,7 @@ namespace BooksCA
                         }
                         else
                         {
-                            btncart.HRef = "~/ViewCart.aspx?id=" + bookdetail.BookID;
+                            btncart.HRef = "~/RegisteredUsers/ViewCart.aspx?id=" + bookdetail.BookID;
                         }
 
                         mainDiv.Controls.Add(newDiv);

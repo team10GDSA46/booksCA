@@ -1,13 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UserPage.aspx.cs" Inherits="BooksCA.UserPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Protected/Protected.Master" AutoEventWireup="true" CodeBehind="UserPage.aspx.cs" Inherits="BooksCA.UserPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <div class="container">
-        <ul>
+<%--        <ul>
             <li><a class="active" href="UserPage.aspx">Home</a></li>
             <li><a href="AddBooks.aspx">Add New Books</a></li>
             <li><a href="WebForm1.aspx">Apply Discounts</a><br /></li>
-        </ul>
+        </ul>--%>
 
         <link rel="stylesheet" href="StyleSheetUserPage.css"/>
         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False"

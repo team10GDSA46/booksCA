@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace BooksCA
 {
-    public partial class AdminLogin1 : System.Web.UI.Page
+    public partial class UserLogin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,22 +16,25 @@ namespace BooksCA
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            using(Mybooks mb = new Mybooks())
+            using (Mybooks mb = new Mybooks())
             {
                 int userid = Convert.ToInt32(txtUserID.Text);
                 string password = Password.Value;
-                if(mb.Users.Where(x => x.UserID == userid)
-                    .Where(x => x.Password == password).Count() > 0)
+                if (mb.Users.Where(x => x.UserID == userid)
+                    .Where(x => x.Password == password)
+                    .Where(x => x.UserType == "user").Count() > 0)
                 {
-                    Session["userauth"] = "true";
+                    Session["role"] = "user";
                     Session["userid"] = userid;
-                    Response.Redirect("~/Protected/UserPage.aspx");
+                    Response.Redirect("~/RegisteredUsers/BookDetails.aspx");
                 }
                 else
                 {
-                    Response.Redirect("~/AdminLogin.aspx");
+                    Response.Redirect("~/UserLogin.aspx");
                 }
             }
+
         }
+
     }
 }

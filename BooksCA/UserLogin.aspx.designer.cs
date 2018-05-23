@@ -10,7 +10,7 @@
 namespace BooksCA {
     
     
-    public partial class AdminLogin1 {
+    public partial class UserLogin {
         
         /// <summary>
         /// Label1 control.
@@ -29,6 +29,15 @@ namespace BooksCA {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUserID;
+        
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// Password control.

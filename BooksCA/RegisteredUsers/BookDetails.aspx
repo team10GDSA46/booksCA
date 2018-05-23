@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BookDetails.aspx.cs" Inherits="BooksCA.BookDetails" %>
+﻿<%@ Page Title="Details" Language="C#" MasterPageFile="~/RegisteredUsers/RegUsers.Master" AutoEventWireup="true" CodeBehind="BookDetails.aspx.cs" Inherits="BooksCA.BookDetails" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class ="row panel panel-body">
         <div class ="col-xs-6 col-sm-6 col-md-6">
