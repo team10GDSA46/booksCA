@@ -7,6 +7,11 @@
              font-size: 150%; font-weight: 700; font-style: italic"></p>
     </div>
     <br />
+    <asp:Label ID="DiscountLabel" runat="server" Text="0"
+        style="position:relative; float:right;
+            font-size: 180%; font-weight: 700; margin-right:30px;"></asp:Label>
+    <br />
+    <br />
     <asp:Label ID="LblTotal" runat="server" Text=""
         style="position:relative; float:right;
             font-size: 180%; font-weight: 700; margin-right:30px;"></asp:Label>

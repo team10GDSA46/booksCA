@@ -4,14 +4,12 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <div class="container">
         <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#addnew">Add New Books</a></li>
-            <li><a href="#discounts">Apply Discounts</a></li>
-            <li>
-                <br />
-            </li>
+            <li><a class="active" href="UserPage.aspx">Home</a></li>
+            <li><a href="AddBooks.aspx">Add New Books</a></li>
+            <li><a href="WebForm1.aspx">Apply Discounts</a><br /></li>
         </ul>
 
+        <link rel="stylesheet" href="StyleSheetUserPage.css"/>
         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False"
             OnRowDeleting="OnRowDeleting"
             OnRowEditing="OnRowEditing"
