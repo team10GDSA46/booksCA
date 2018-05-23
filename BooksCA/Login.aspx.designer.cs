@@ -10,7 +10,7 @@
 namespace BooksCA {
     
     
-    public partial class AdminLogin {
+    public partial class Login {
         
         /// <summary>
         /// Login1 control.

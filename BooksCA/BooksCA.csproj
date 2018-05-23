@@ -142,10 +142,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminLogin.aspx" />
-    <Content Include="Login.aspx" />
     <Content Include="delete\About.aspx" />
-    <Content Include="BookDetails.aspx" />
-    <Content Include="AddBooks.aspx" />
+    <Content Include="RegisteredUsers\BookDetails.aspx" />
+    <Content Include="Protected\AddBooks.aspx" />
     <Content Include="delete\Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -167,14 +166,16 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Login.aspx" />
     <Content Include="StyleSheettestLogin.css" />
-    <Content Include="UserPage.aspx" />
-    <Content Include="delete\WebForm1.aspx" />
+    <Content Include="Protected\UserPage.aspx" />
+    <Content Include="Protected\WebForm1.aspx" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile2.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile3.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile4.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile5.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="delete\Loginpage.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -207,7 +208,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="Stylesheet\StyleSheet.css" />
-    <Content Include="ViewCart.aspx" />
+    <Content Include="RegisteredUsers\ViewCart.aspx" />
     <Content Include="StyleSheetnav.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
@@ -217,11 +218,11 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddBooks.aspx.cs">
+    <Compile Include="Protected\AddBooks.aspx.cs">
       <DependentUpon>AddBooks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddBooks.aspx.designer.cs">
+    <Compile Include="Protected\AddBooks.aspx.designer.cs">
       <DependentUpon>AddBooks.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminLogin.aspx.cs">
@@ -230,13 +231,6 @@
     </Compile>
     <Compile Include="AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="delete\About.aspx.cs">
@@ -249,11 +243,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="bizlogic.cs" />
     <Compile Include="Book.cs" />
-    <Compile Include="BookDetails.aspx.cs">
+    <Compile Include="RegisteredUsers\BookDetails.aspx.cs">
       <DependentUpon>BookDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BookDetails.aspx.designer.cs">
+    <Compile Include="RegisteredUsers\BookDetails.aspx.designer.cs">
       <DependentUpon>BookDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="CartBook.cs" />
@@ -283,6 +277,13 @@
     <Compile Include="delete\Loginpage.aspx.designer.cs">
       <DependentUpon>Loginpage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mybooks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -303,18 +304,18 @@
     <Compile Include="TransDetail.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserBusinessLogic.cs" />
-    <Compile Include="UserPage.aspx.cs">
+    <Compile Include="Protected\UserPage.aspx.cs">
       <DependentUpon>UserPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserPage.aspx.designer.cs">
+    <Compile Include="Protected\UserPage.aspx.designer.cs">
       <DependentUpon>UserPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewCart.aspx.cs">
+    <Compile Include="RegisteredUsers\ViewCart.aspx.cs">
       <DependentUpon>ViewCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewCart.aspx.designer.cs">
+    <Compile Include="RegisteredUsers\ViewCart.aspx.designer.cs">
       <DependentUpon>ViewCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
@@ -327,18 +328,17 @@
     <Compile Include="Work.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="delete\WebForm1.aspx.cs">
+    <Compile Include="Protected\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="delete\WebForm1.aspx.designer.cs">
+    <Compile Include="Protected\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Pictures\" />
-    <Folder Include="Protected\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
