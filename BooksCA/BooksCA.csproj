@@ -175,7 +175,6 @@
     <None Include="Properties\PublishProfiles\CustomProfile2.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile3.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile4.pubxml" />
-    <Content Include="Protected\Web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="delete\Loginpage.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -339,6 +338,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Pictures\" />
+    <Folder Include="Protected\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
