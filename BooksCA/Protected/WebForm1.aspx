@@ -43,7 +43,7 @@
         <br />
         <br /> 
         <div class="text-right col-xs-4 col-sm-4 col-md-4">
-        <asp:Button ID="ApplyButton" runat="server"  Text="Apply" OnClick="ApplyButton_Click" />
+        <asp:Button ID="ApplyButton" runat="server" class="btn btn-primary" Text="Apply" OnClick="ApplyButton_Click" />
 
         <br />      
         
