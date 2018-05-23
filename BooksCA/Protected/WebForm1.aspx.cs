@@ -52,6 +52,7 @@ namespace BooksCA
 
         protected void ApplyButton_Click(object sender, EventArgs e)
         {
+            bool ExceptionFound = false;
             try
             {
                 DateTime fd = datepicker.SelectedDate;
@@ -73,7 +74,13 @@ namespace BooksCA
 
             catch(System.FormatException)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Please ensure all records are properly filled');", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Please ensure all boxes are properly filled');", true);
+                ExceptionFound = true;
+            }
+
+            if(ExceptionFound == false)
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('New Discount has been added !');", true);
             }
                 
         }
