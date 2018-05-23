@@ -59,7 +59,7 @@
                 </div>
                 <div class="navbar-collapse collapse" id="nav-collapse"> 
                      <ul class="nav navbar-nav navbar-right">
-                        <li><a runat="server" class="nav-link" href="~/signup">Sign Up</a></li>
+                        <li><a runat="server" class="nav-link" href="~/about.aspx">Sign Up</a></li>
                         <li><a runat="server" class="nav-link" href="~/login">Login</a></li>
                         <li><a runat="server" class="nav-link" href="~/cart">Cart</a></li>
                     </ul>

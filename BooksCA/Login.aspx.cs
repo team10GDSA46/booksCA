@@ -7,11 +7,15 @@ using System.Web.UI.WebControls;
 
 namespace BooksCA
 {
-    public partial class testlogin : System.Web.UI.Page
+    public partial class AdminLogin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
+        {
         }
     }
 }

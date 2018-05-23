@@ -14,6 +14,10 @@ namespace BooksCA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["userauth"] == null )
+            {
+                Response.Redirect("~/AdminLogin.aspx");
+            }
             if (!IsPostBack)
             {
                 using (Mybooks mb = new Mybooks())
