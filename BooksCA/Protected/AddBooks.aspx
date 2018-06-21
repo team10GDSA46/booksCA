@@ -41,7 +41,7 @@
 				<asp:FileUpload ID="FileUpload1" runat="server" BorderStyle="Inset" Height="36px" />
 		</div>
 		<div>
-			<asp:Button ID="Button2" runat="server"  class="btn btn-primary btn-file" Text="Button" OnClick="Button2_Click2" />
+			<asp:Button ID="Button2" runat="server"  class="btn btn-primary btn-file" Text="Sumbit" OnClick="Button2_Click2" />
 		</div>
 
 		<div>

@@ -10,7 +10,7 @@
 namespace BooksCA {
     
     
-    public partial class _Default {
+    public partial class _Default1 {
         
         /// <summary>
         /// mainDiv control.

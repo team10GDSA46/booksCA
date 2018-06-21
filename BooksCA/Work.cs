@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.Security;
 
 namespace BooksCA
 {
@@ -11,6 +12,16 @@ namespace BooksCA
     {
         Mybooks mb = new Mybooks();
 
+        public static void LogOutAdmin()
+        {
+            FormsAuthentication.SignOut();
+            FormsAuthentication.RedirectToLoginPage();
+        }
+        public static void LogOutUser()
+        {
+            HttpContext.Current.Session.Clear();
+            HttpContext.Current.Response.Redirect("~/UserLogin.aspx");
+        }
         public Book GetBook(int id)
         {
             return mb.Books.Where

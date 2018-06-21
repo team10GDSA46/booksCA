@@ -10,10 +10,19 @@ using System.Data.SqlClient;
 
 namespace BooksCA
 {
-    public partial class _Default : Page
+    public partial class _Default1 : Page
     {
+        int userid;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["role"] == null || (string)Session["role"] != "user")
+            {
+                Response.Redirect("~/UserLogin.aspx");
+            }
+            else
+            {
+                userid = (int)Session["userid"];
+            }
             if (!IsPostBack)
             {
                 using (Mybooks mb = new Mybooks())
@@ -25,8 +34,9 @@ namespace BooksCA
                         HtmlGenericControl details = new HtmlGenericControl("DIV");
                         HtmlInputImage image = new HtmlInputImage();
                         HtmlAnchor anch = new HtmlAnchor();
+                        HtmlAnchor btncart = new HtmlAnchor();
 
-                        image.Src = "images/" + bookdetail.ISBN + ".jpg";
+                        image.Src = "~/images/" + bookdetail.ISBN + ".jpg";
                         image.Disabled = true;
                         image.Style.Add("width", "200px");
                         image.Style.Add("height", "220px");
@@ -43,12 +53,40 @@ namespace BooksCA
                         newDiv.Style.Add("text-align", "center");
                         newDiv.Style.Add("padding", "30px");
 
-                        anch.HRef = "~/BookDetails1.aspx?id=" + bookdetail.BookID;
+                        btncart.InnerText = "Add to Cart";
+                        btncart.Attributes.Add("class", "btn btn-primary");
+                        btncart.Style.Add("position", "absolute");
+                        btncart.Style.Add("top", "86%");
+                        btncart.Style.Add("left", "36%");
+                        btncart.ID = bookdetail.BookID.ToString();
+
+
+                        anch.HRef = "~/RegisteredUsers/BookDetails.aspx?id=" + bookdetail.BookID;
+                        
+                        // user access
+                        if(mb.CartBooks.Where(x => (x.UserID == userid) &&
+
+                         (x.BookID == bookdetail.BookID)).Count() > 0)
+                        {
+                            btncart.InnerText = "Already in cart!";
+                            btncart.Style["left"] = "33%";
+                            btncart.Disabled = true;
+                        } else if(new Work().CheckStock(bookdetail.BookID) < 1)
+                        {
+                            btncart.InnerText = "Out of Stock";
+                            btncart.Attributes["class"] = "btn btn-danger";
+                            btncart.Disabled = true;
+                        }
+                        else
+                        {
+                            btncart.HRef = "~/RegisteredUsers/ViewCart.aspx?id=" + bookdetail.BookID;
+                        }
 
                         mainDiv.Controls.Add(newDiv);
                         newDiv.Controls.Add(image);
                         newDiv.Controls.Add(anch);
                         newDiv.Controls.Add(details);
+                        newDiv.Controls.Add(btncart);
                     }
                 }
             }

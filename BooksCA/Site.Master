@@ -60,8 +60,8 @@
                 <div class="navbar-collapse collapse" id="nav-collapse"> 
                      <ul class="nav navbar-nav navbar-right">
 
-                        <li><a runat="server" class="nav-link" href="testlogin.aspx">User Login</a></li>
-                        <li><a runat="server" class="nav-link" href="~/RegisteredUsers/ViewCart.aspx">Cart</a></li>
+                        <li><a runat="server" class="nav-link" href="~/UserLogin.aspx">User Login</a></li>
+                        <li><a runat="server" class="nav-link" href="~/Default.aspx">Books</a></li>
 
                     </ul>
                 </div>

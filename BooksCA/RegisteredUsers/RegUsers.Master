@@ -61,8 +61,8 @@
                      <ul class="nav navbar-nav navbar-right">
 
                         <li><a runat="server" class="nav-link" href="~/">Home</a></li>
-                        <li><a runat="server" class="nav-link" href="~/RegisteredUsers/BookDetails.aspx">Add Book</a></li>
-                        <li><a runat="server" class="nav-link" href="~/RegisteredUsers/ViewCart.aspx">Manage Books</a></li>
+                        <li><a runat="server" class="nav-link" href="~/RegisteredUsers/Default1.aspx">Books</a></li>
+                        <li><a runat="server" class="nav-link" href="~/RegisteredUsers/ViewCart.aspx">Cart</a></li>
                     </ul>
                 </div>
             </div>

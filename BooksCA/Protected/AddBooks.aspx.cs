@@ -41,6 +41,7 @@ namespace BooksCA
                     int Cat = Convert.ToInt32(RadioButtonList1.SelectedValue.ToString());
                     bizlogic.AddBook(Title, ISBN, Author, Cat, stock, price);
                     StatusLabel.Text = "Upload status: File uploaded!";
+                    Response.Redirect("~/Protected/UserPage.aspx");
                 }
                 catch (Exception ex)
                 {

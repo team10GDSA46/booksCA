@@ -16,22 +16,29 @@ namespace BooksCA
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            using (Mybooks mb = new Mybooks())
+           try
             {
-                int userid = Convert.ToInt32(txtUserID.Text);
-                string password = Password.Value;
-                if (mb.Users.Where(x => x.UserID == userid)
-                    .Where(x => x.Password == password)
-                    .Where(x => x.UserType == "user").Count() > 0)
+                using (Mybooks mb = new Mybooks())
                 {
-                    Session["role"] = "user";
-                    Session["userid"] = userid;
-                    Response.Redirect("~/RegisteredUsers/BookDetails.aspx");
+                    int userid = Convert.ToInt32(txtUserID.Text);
+                    string password = Password.Value;
+                    if (mb.Users.Where(x => x.UserID == userid)
+                        .Where(x => x.Password == password).Count() > 0)
+                    {
+                        Session["role"] = "user";
+                        Session["userid"] = userid;
+                        Response.Redirect("~/RegisteredUsers/Default1.aspx");
+                    }
+                    else
+                    {
+                        Response.Redirect("~/UserLogin.aspx");
+                    }
                 }
-                else
-                {
-                    Response.Redirect("~/UserLogin.aspx");
-                }
+            }
+
+            catch(System.FormatException)
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Please enter valid credentials');", true);
             }
 
         }

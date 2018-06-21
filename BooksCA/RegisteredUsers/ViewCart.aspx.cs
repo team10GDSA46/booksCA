@@ -12,11 +12,18 @@ namespace BooksCA
     {
 
         Mybooks mb;
-        int userid = 1;
+        int userid;
         int bid;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["role"] == null || (string)Session["role"] != "user")
+            {
+                Response.Redirect("~/UserLogin.aspx");
+            }
+            else
+            {
+                userid = (int)Session["userid"];
+            }
             mb = new Mybooks();
             if (Request.QueryString["id"] != null)
             {
@@ -31,12 +38,12 @@ namespace BooksCA
                     .Count() < 1))
                 {
                     CartBook newitem = new CartBook();
-                    newitem.UserID = 1;
+                    newitem.UserID = userid;
                     newitem.BookID = bid;
                     mb.CartBooks.Add(newitem);
                     mb.SaveChanges();
                 }
-                Response.Redirect("~/ViewCart.aspx/");
+                Response.Redirect("~/RegisteredUsers/ViewCart.aspx");
             }
             using (mb)
             {
@@ -131,7 +138,7 @@ namespace BooksCA
             mb.CartBooks.Remove(toDel);
 
             mb.SaveChanges();
-            Response.Redirect("~/ViewCart.aspx");
+            Response.Redirect("~/RegisteredUsers/ViewCart.aspx/");
         }
 
 
@@ -141,7 +148,7 @@ namespace BooksCA
             Work w = new Work();
             w.Transaction(userid, cartitems);
             w.RemoveItems(userid);
-            Response.Redirect("~/ViewCart.aspx?");
+            Response.Redirect("~/RegisteredUsers/ViewCart.aspx");
 
         }
     }
