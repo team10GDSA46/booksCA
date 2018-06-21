@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksCA", "BooksCA\BooksCA.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{9EB4FC8B-76E5-4F0B-ABA9-C518F731C928}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp3", "ConsoleApp3\ConsoleApp3.csproj", "{D8208128-0B50-436B-8016-A81C6BA9C69A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{370355B4-7D2B-40A4-A52C-D7425F6380B6} = {370355B4-7D2B-40A4-A52C-D7425F6380B6}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +26,10 @@ Global
 		{9EB4FC8B-76E5-4F0B-ABA9-C518F731C928}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EB4FC8B-76E5-4F0B-ABA9-C518F731C928}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EB4FC8B-76E5-4F0B-ABA9-C518F731C928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8208128-0B50-436B-8016-A81C6BA9C69A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8208128-0B50-436B-8016-A81C6BA9C69A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8208128-0B50-436B-8016-A81C6BA9C69A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8208128-0B50-436B-8016-A81C6BA9C69A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

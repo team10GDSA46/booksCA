@@ -12,6 +12,21 @@ namespace BooksCA
     {
         Mybooks mb = new Mybooks();
 
+        public List<Book> GetBooks()
+        {
+            return mb.Books.ToList<Book>() ;
+        }
+
+        public List<int> GetBooksIds()
+        {
+            List<int> list = new List<int>();
+            foreach (Book b in GetBooks())
+            {
+                list.Add(b.BookID);
+            }
+            return list;
+        }
+
         public static void LogOutAdmin()
         {
             FormsAuthentication.SignOut();
