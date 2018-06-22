@@ -14,11 +14,15 @@ namespace BooksCA
     {
         [OperationContract]
         [WebGet(UriTemplate = "/Books", ResponseFormat = WebMessageFormat.Json)]
-        List<int> GetBookIds();
+        List<int> GetBooks();
 
         [OperationContract]
         [WebGet(UriTemplate = "/Book/{id}", ResponseFormat = WebMessageFormat.Json)]
         WCF_Product GetBook(string id);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/AllBooks", ResponseFormat = WebMessageFormat.Json)]
+        List<WCF_Product> BookDetail();
     }
 
     [DataContract]

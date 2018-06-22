@@ -12,6 +12,11 @@ namespace BooksCA
     {
         Mybooks mb = new Mybooks();
 
+        public List<Book> GetBookByTitle(String search)
+        {
+            return null;
+        }
+
         public List<Book> GetBooks()
         {
             return mb.Books.ToList<Book>() ;

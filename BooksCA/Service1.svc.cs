@@ -11,6 +11,19 @@ namespace BooksCA
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
+        public List<WCF_Product> BookDetail()
+        {
+            List<WCF_Product> books = new List<WCF_Product>();
+
+            List<int> BooksID = this.GetBooks();
+            foreach(int i in BooksID)
+            {
+                books.Add(this.GetBook(i.ToString()));
+            }
+
+            return books;
+        }
+
         public WCF_Product GetBook(string id)
         {
             int n = Int32.Parse(id);
@@ -22,7 +35,7 @@ namespace BooksCA
             return null;            
         }
 
-        public List<int> GetBookIds()
+        public List<int> GetBooks()
         {
             return new Work().GetBooksIds();
         }
