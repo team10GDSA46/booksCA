@@ -39,5 +39,18 @@ namespace BooksCA
         {
             return new Work().GetBooksIds();
         }
+
+        public List<WCF_Product> SearchBooks(string search)
+        {
+            List<WCF_Product> books = new List<WCF_Product>();
+
+            List<int> SearchedBooks = new Work().SearchBook(search.Replace("%20", " "));
+            foreach (int i in SearchedBooks)
+            {
+                books.Add(this.GetBook(i.ToString()));
+            }
+
+            return books;
+        }
     }
 }

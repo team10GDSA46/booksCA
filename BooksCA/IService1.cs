@@ -23,6 +23,10 @@ namespace BooksCA
         [OperationContract]
         [WebGet(UriTemplate = "/AllBooks", ResponseFormat = WebMessageFormat.Json)]
         List<WCF_Product> BookDetail();
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/SearchBook/{search}", ResponseFormat = WebMessageFormat.Json)]
+        List<WCF_Product> SearchBooks(string search);
     }
 
     [DataContract]

@@ -12,6 +12,19 @@ namespace BooksCA
     {
         Mybooks mb = new Mybooks();
 
+        public List<int> SearchBook(string searchtxt)
+        {
+            List<int> list = new List<int>();
+            foreach (Book b in GetBooks())
+            {
+                if (b.Title.ToUpper().Contains(searchtxt.Trim().ToUpper()))
+                {
+                    list.Add(b.BookID);
+                }
+            }
+            return list;
+        }
+
         public List<Book> GetBookByTitle(String search)
         {
             return null;
