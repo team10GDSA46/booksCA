@@ -40,11 +40,20 @@ namespace BooksCA
             return new Work().GetBooksIds();
         }
 
+        public List<string> GetISBN()
+        {
+            return new Work().GetISBN();
+        }
+
         public List<WCF_Product> SearchBooks(string search)
         {
             List<WCF_Product> books = new List<WCF_Product>();
+            string decodedUrl = Uri.UnescapeDataString(search);
+            //string decodedUrl = search.Replace("%20", " ").Replace("%3A", ":").Replace("%23", "+");
+            List<int> SearchedBooks = new Work().SearchBook(decodedUrl);
+            
+            //List<int> SearchedBooks = new Work().SearchBook(search.Replace("%20", " ").Replace("%21",":").Replace("%23", "+"));
 
-            List<int> SearchedBooks = new Work().SearchBook(search.Replace("%20", " "));
             foreach (int i in SearchedBooks)
             {
                 books.Add(this.GetBook(i.ToString()));

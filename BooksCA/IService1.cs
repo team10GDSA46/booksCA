@@ -17,6 +17,10 @@ namespace BooksCA
         List<int> GetBooks();
 
         [OperationContract]
+        [WebGet(UriTemplate = "/ISBN", ResponseFormat = WebMessageFormat.Json)]
+        List<string> GetISBN();
+
+        [OperationContract]
         [WebGet(UriTemplate = "/Book/{id}", ResponseFormat = WebMessageFormat.Json)]
         WCF_Product GetBook(string id);
 
@@ -25,7 +29,7 @@ namespace BooksCA
         List<WCF_Product> BookDetail();
 
         [OperationContract]
-        [WebGet(UriTemplate = "/SearchBook/{search}", ResponseFormat = WebMessageFormat.Json)]
+        [WebGet(UriTemplate = "/SearchBook/?q={search}", ResponseFormat = WebMessageFormat.Json)]
         List<WCF_Product> SearchBooks(string search);
     }
 

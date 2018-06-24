@@ -12,12 +12,27 @@ namespace BooksCA
     {
         Mybooks mb = new Mybooks();
 
+        public List<string> GetISBN()
+        {
+            List<string> list = new List<string>();
+            foreach (Book b in GetBooks())
+            {
+                list.Add(b.ISBN);
+            }
+            return list;
+
+        }
+
         public List<int> SearchBook(string searchtxt)
         {
             List<int> list = new List<int>();
+            string convertText;
+
+            convertText = searchtxt.ToUpper();
+
             foreach (Book b in GetBooks())
             {
-                if (b.Title.ToUpper().Contains(searchtxt.Trim().ToUpper()))
+                if (b.Title.ToUpper().Contains(convertText))
                 {
                     list.Add(b.BookID);
                 }
